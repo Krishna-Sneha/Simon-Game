@@ -40,8 +40,8 @@ function animatePress(currentColor){
         $("#"+currentColor).removeClass("pressed")},
     100);
 }
-
 function Validate(currentLevel){
+    
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel])
     {
         if(gamePattern.length == userClickedPattern.length)
@@ -63,7 +63,7 @@ function Validate(currentLevel){
         }, 200);
         level = 0;
         started = false;
-
+        gamePattern = [];
     }
 
 }
