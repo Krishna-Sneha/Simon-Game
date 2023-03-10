@@ -41,26 +41,9 @@ function animatePress(currentColor){
     100);
 }
 
-// if(level==0){
-//     level = 1;
-//   $(document).keypress(function(){
-//     nextSequence();
-//   })
-// }
-
 function Validate(currentLevel){
-    
-    // if(JSON.stringify(userClickedPattern) == JSON.stringify(gamePattern))
-    // {
-    //     nextSequence();
-    // }
-    // if(JSON.stringify(gamePattern) == JSON.stringify(userClickedPattern))
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel])
     {
-        // console.log("User "+userClickedPattern);
-        // console.log("Game "+gamePattern);
-        // console.log("true");
-
         if(gamePattern.length == userClickedPattern.length)
         {
             setTimeout(function(){
@@ -72,14 +55,9 @@ function Validate(currentLevel){
 
     else
     {
-        // console.log("User "+userClickedPattern);
-        // console.log("Game "+gamePattern);
-        // console.log("false");
         playSound("wrong");
-        // $("body").css("background-color", "red");
         $("h1").html("Game Over, Press any key to restart")
         $("body").addClass("game-over");
-        // started = false;
         setTimeout(function(){
             $("body").removeClass("game-over")
         }, 200);
